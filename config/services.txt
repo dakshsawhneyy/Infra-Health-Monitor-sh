@@ -1,5 +1,3 @@
-
-
 my_portfolio="daksh-portfolio.cctlds.online"
-google="google.com"
-youtube="youtube.com"
+google="www.google.com"
+youtube="www.youtube.com"
