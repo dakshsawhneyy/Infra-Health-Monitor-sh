@@ -6,6 +6,9 @@ website_file="$website_file_path/services.txt"
 log_file_path="$(dirname "$0")/../logs"
 log_file="$log_file_path/website-health.log"
 
+# This folder will hold tiny files that act as markers telling us "We have already sent alert for this website."
+alert_path="$(dirname "$0")/../alert_flags" # Alert Flags Folder Path - which contain flag for down site
+
 mkdir -p "$log_file_path"
 
 echo -e "\e[30m\nChecking website uptime...\e[0m"
@@ -16,13 +19,31 @@ while IFS= read -r line; do     # using IFS to read because for loop will break 
     website=$(echo "$line" | cut -d'=' -f2 | sed 's/"//g' | tr -d '\r') 
     if [ -n "$website" ]; then
         status_code=$(curl -Is --max-time 5 "https://$website" | head -n 1 | awk '{print $2}')
+        
+        # flag_file creation using A fixed-length "fingerprint" (32 characters) -- md5sum
+        flag_file="$alert_path/$(echo "$website" | md5sum | awk '{print $1}').flag" 
+
         if [[ $status_code -eq 200 ]]; then
             echo -e "\e[32m$website is UP (HTTP $status_code)\e[0m"
+
+            # if flag is present, remove it because now website is up
+            if [ -f "$flag_file" ];then
+                # echo "Remove the flag"
+                rm -rf "$flag_file"
+            fi
+
         else
             echo -e "\e[31m$website is DOWN (HTTP ${status_code:-404})\e[0m"
-            echo -e "\nTriggering alert for $website with status code ${status_code:-404}\n"
-            # :- means send status code and if it is not present send 404 as status code
-            bash "$(dirname "$0")/alert.sh" "CRITICAL" "Website is DOWN: $website returned HTTP ${status_code:-404}"
+
+            # If Flag exists do nothing and if not -- create and send notif to slack
+            if [ ! -f "$flag_file" ]; then
+                # echo "Send Notification to Slack" echo "Create Flag"
+                touch "$flag_file"
+                echo -e "\nTriggering alert for $website with status code ${status_code:-404}\n"
+                # :- means send status code and if it is not present send 404 as status code
+                bash "$(dirname "$0")/alert.sh" "CRITICAL" "Website is DOWN: $website returned HTTP ${status_code:-404}"
+            fi 
+
         fi
         # Sending Text to Log File
         {
