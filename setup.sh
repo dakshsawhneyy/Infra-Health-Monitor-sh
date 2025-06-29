@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Running docker containers to check the script
+
 docker run -d \
     --name my-nginx \
     --health-cmd='curl -f http://localhost:80/ || exit 1' \

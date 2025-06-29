@@ -10,12 +10,12 @@ log_file="$log_file_path/website-health.log"
 alert_path="$(dirname "$0")/../alert_flags" # Alert Flags Folder Path - which contain flag for down site
 
 mkdir -p "$log_file_path"
+touch "$log_file"
 
 echo -e "\e[30m\nChecking website uptime...\e[0m"
-
 echo -e "\e[34m===========================================\e[0m"
 
-while IFS= read -r line; do     # using IFS to read because for loop will break word into pieces
+while IFS= read -r line; do     # using IFS to read because for loop will break word into pieces and by default it is line
     website=$(echo "$line" | cut -d'=' -f2 | sed 's/"//g' | tr -d '\r') 
     if [ -n "$website" ]; then
         status_code=$(curl -Is --max-time 5 "https://$website" | head -n 1 | awk '{print $2}')
@@ -29,6 +29,7 @@ while IFS= read -r line; do     # using IFS to read because for loop will break 
             # if flag is present, remove it because now website is up
             if [ -f "$flag_file" ];then
                 # echo "Remove the flag"
+                bash "$(dirname "$0")/alert.sh" "UP" "Website is UP: $website returned HTTP ${status_code:-404}"
                 rm -rf "$flag_file"
             fi
 
