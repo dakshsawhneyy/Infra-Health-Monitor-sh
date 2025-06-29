@@ -7,9 +7,32 @@ source "$(dirname "$0")/../config/webhook.env"
 severity="$1"   # Expected values: "critical", "warning", "info"
 message="$2"    # message we wanted to send to slack
 
+# Map severity to color
+case "$severity" in
+  CRITICAL|critical)
+    color="#ff0000" # red
+    ;;
+  warning|WARNING)
+    color="#ffae42" # orange
+    ;;
+  info|INFO)
+    color="#36a64f" # green
+    ;;
+  *)
+    color="#cccccc" # gray (default)
+    ;;
+esac
+
 # payload accepts json format #! \" means " is treated as " not simple text
 payload="{
-    \"text\": \"[$severity] $message\"      
+  \"attachments\": [
+    {
+      \"color\": \"$color\",
+      \"title\": \"Website Check\",
+      \"text\": \"$message\",
+      \"footer\": \"Health Checker Bot\"
+    }
+  ]
 }"
 
 # Check if SLACK_WEBHOOK_URL is set and not empty
