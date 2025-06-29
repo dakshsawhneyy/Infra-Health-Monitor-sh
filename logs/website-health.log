@@ -1,0 +1,12 @@
+29-06-2025_16:38:07 ---- daksh-portfolio.cctlds.online returned HTTP 200
+29-06-2025_16:38:07 ---- www.google.com returned HTTP 200
+29-06-2025_16:38:10 ---- www.youtube.com returned HTTP 200
+29-06-2025_16:38:10 ---- github.com returned HTTP 200
+29-06-2025_16:38:10 ---- example23456.com returned HTTP 404
+===========================================
+29-06-2025_16:39:05 ---- daksh-portfolio.cctlds.online returned HTTP 200
+29-06-2025_16:39:05 ---- www.google.com returned HTTP 200
+29-06-2025_16:39:05 ---- www.youtube.com returned HTTP 200
+29-06-2025_16:39:06 ---- github.com returned HTTP 200
+29-06-2025_16:39:06 ---- example23456.com returned HTTP 404
+===========================================
