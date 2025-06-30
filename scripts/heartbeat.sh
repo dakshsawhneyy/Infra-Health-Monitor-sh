@@ -9,7 +9,7 @@ payload="{
     {
       \"color\": \"#36a64f\",
       \"title\": \"Website Check\",
-      \"text\": \"$message \",
+      \"text\": \"$message\",
       \"footer\": \"Health Checker Bot\"
     }
   ]

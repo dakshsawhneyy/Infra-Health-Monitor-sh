@@ -2,3 +2,11 @@
 my-sql is healthy
 my-nginx is healthy
 ****************
+[29-06-2025_18:24:44] Checking Containers Status...
+my-sql is starting
+my-nginx is healthy
+****************
+[29-06-2025_18:24:47] Checking Containers Status...
+my-sql is healthy
+my-nginx is healthy
+****************

@@ -42,7 +42,7 @@ while IFS= read -r line; do     # using IFS to read because for loop will break 
                 touch "$flag_file"
                 echo -e "\nTriggering alert for $website with status code ${status_code:-404}\n"
                 # :- means send status code and if it is not present send 404 as status code
-                bash "$(dirname "$0")/alert.sh" "WARNING" "Website is DOWN: $website returned HTTP ${status_code:-404}"
+                bash "$(dirname "$0")/alert.sh" "CRITICAL" "Website is DOWN: $website returned HTTP ${status_code:-404}"
             fi 
 
         fi
