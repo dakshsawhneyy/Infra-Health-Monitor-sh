@@ -19,7 +19,9 @@ while IFS= read -r line; do     # using IFS to read because for loop will break 
     website=$(echo "$line" | cut -d'=' -f2 | sed 's/"//g' | tr -d '\r') 
     if [ -n "$website" ]; then
         status_code=$(curl -Is --max-time 5 "https://$website" | head -n 1 | awk '{print $2}')
-        
+        latency=$(curl -o /dev/null -s -w '%{time_total}\n' "https://$website")
+        status="UP"
+
         # flag_file creation using A fixed-length "fingerprint" (32 characters) -- md5sum
         flag_file="$alert_path/$(echo "$website" | md5sum | awk '{print $1}').flag" 
 
@@ -35,6 +37,7 @@ while IFS= read -r line; do     # using IFS to read because for loop will break 
 
         else
             echo -e "\e[31m$website is DOWN (HTTP ${status_code:-404})\e[0m"
+            status="DOWN"
 
             # If Flag exists do nothing and if not -- create and send notif to slack
             if [ ! -f "$flag_file" ]; then
@@ -46,6 +49,10 @@ while IFS= read -r line; do     # using IFS to read because for loop will break 
             fi 
 
         fi
+
+        # Calling dashboard script to send data to json file
+        bash "$(dirname "$0")/dashboard.sh" "$website" "$status" "$status_code" "$latency"
+
         # Sending Text to Log File
         {
             echo "$(date +"%d-%m-%Y_%H:%M:%S") ---- $website returned HTTP ${status_code:-404}"
