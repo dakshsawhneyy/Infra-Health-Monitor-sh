@@ -1,5 +1,5 @@
 {
-        "last_checked":"01-07-2025_09:00:46",
+        "last_checked":"01-07-2025_09:13:26",
         "services": [
             {
     "Name": "daksh-portfolio.cctlds.online",
@@ -120,6 +120,36 @@
     "Status": "DOWN",
     "HTTP_Status": "",
     "Latency": "0.003581"
+}
+,{
+    "Name": "daksh-portfolio.cctlds.online",
+    "Status": "UP",
+    "HTTP_Status": "200",
+    "Latency": "0.432650"
+}
+,{
+    "Name": "www.google.com",
+    "Status": "UP",
+    "HTTP_Status": "200",
+    "Latency": "0.801049"
+}
+,{
+    "Name": "www.youtube.com",
+    "Status": "UP",
+    "HTTP_Status": "200",
+    "Latency": "0.475783"
+}
+,{
+    "Name": "github.com",
+    "Status": "UP",
+    "HTTP_Status": "200",
+    "Latency": "0.780915"
+}
+,{
+    "Name": "example23456.com",
+    "Status": "DOWN",
+    "HTTP_Status": "",
+    "Latency": "0.003636"
 }
       ]
 }

@@ -15,7 +15,7 @@ touch "$log_file"
 echo -e "\e[30m\nChecking website uptime...\e[0m"
 echo -e "\e[34m===========================================\e[0m"
 
-while IFS= read -r line; do     # using IFS to read because for loop will break word into pieces and by default it is line
+while read -r line; do     # using IFS to read because for loop will break word into pieces and by default it is line
     website=$(echo "$line" | cut -d'=' -f2 | sed 's/"//g' | tr -d '\r') 
     if [ -n "$website" ]; then
         status_code=$(curl -Is --max-time 5 "https://$website" | head -n 1 | awk '{print $2}')
