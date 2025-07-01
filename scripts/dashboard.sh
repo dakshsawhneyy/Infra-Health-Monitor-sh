@@ -24,7 +24,7 @@ service_entry="{
 # Check if json_file is not empty - then append and if it is, append {} into mt file
 if [ ! -s "$json_file" ]; then
     echo "{
-        \"last_checked\": \"$(date +"%d-%m-%Y %H:%M:%S")\",
+        \"last_checked\": \"$(date +"%d-%m-%Y_%H:%M:%S")\",
         \"services\": [
             $service_entry
         ]
@@ -48,3 +48,7 @@ else
     # Move the file to $json_file
     mv "$temp_file" "$json_file"
 fi
+
+# Changing Or Appending new date using sed into json file
+sed -i "s/\"last_checked\":\".*\"/\"last_checked\":\"$(date +"%d-%m-%Y_%H:%M:%S")\"/" "$json_file"
+echo "Date Changed"
