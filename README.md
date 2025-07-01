@@ -86,7 +86,4 @@ Example crontab entry (every 5 minutes):
 ## Author
 
 Daksh Sawhney
-
 ---
-
-Generated on 01-07-2025 09:49:09
