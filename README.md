@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is a complete monitoring suite designed to help you track the health of your Docker containers and the uptime of external websites. It integrates alerting, log rotation, and JSON dashboard generation — all using pure shell scripting.
+This project is a complete monitoring suite designed to help you track the health of your Docker containers and the uptime of external websites. It integrates alerting, log rotation, and JSON dashboard generation - all using pure shell scripting.
 
 ## Features
 
