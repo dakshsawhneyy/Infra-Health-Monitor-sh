@@ -1,155 +1,161 @@
 {
-        "last_checked":"01-07-2025_09:13:26",
+        "last_checked": "01-07-2025_09:37:38",
         "services": [
             {
     "Name": "daksh-portfolio.cctlds.online",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.977478"
+    "Latency": "0.165558"
 }
 ,{
     "Name": "www.google.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.566008"
+    "Latency": "0.526006"
 }
 ,{
     "Name": "www.youtube.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.564869"
+    "Latency": "0.666758"
+}
+,{
+    "Name": "example23456.com",
+    "Status": "DOWN",
+    "HTTP_Status": "404",
+    "Latency": "0.003710"
 }
 ,{
     "Name": "github.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.379476"
-}
-,{
-    "Name": "example23456.com",
-    "Status": "DOWN",
-    "HTTP_Status": "",
-    "Latency": "0.003757"
+    "Latency": "0.456443"
 }
 ,{
     "Name": "daksh-portfolio.cctlds.online",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.176829"
-}
-,{
-    "Name": "www.google.com",
-    "Status": "UP",
-    "HTTP_Status": "200",
-    "Latency": "1.000857"
-}
-,{
-    "Name": "www.youtube.com",
-    "Status": "UP",
-    "HTTP_Status": "200",
-    "Latency": "0.691955"
-}
-,{
-    "Name": "github.com",
-    "Status": "UP",
-    "HTTP_Status": "200",
-    "Latency": "0.412143"
-}
-,{
-    "Name": "example23456.com",
-    "Status": "DOWN",
-    "HTTP_Status": "",
-    "Latency": "0.008197"
+    "Latency": "0.473998"
 }
 ,{
     "Name": "daksh-portfolio.cctlds.online",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.182650"
+    "Latency": "0.192587"
 }
 ,{
     "Name": "www.google.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.557415"
+    "Latency": "0.580211"
 }
 ,{
     "Name": "www.youtube.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.586766"
+    "Latency": "0.627722"
+}
+,{
+    "Name": "example23456.com",
+    "Status": "DOWN",
+    "HTTP_Status": "404",
+    "Latency": "0.003542"
 }
 ,{
     "Name": "github.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.392472"
-}
-,{
-    "Name": "example23456.com",
-    "Status": "DOWN",
-    "HTTP_Status": "",
-    "Latency": "0.035885"
+    "Latency": "0.390733"
 }
 ,{
     "Name": "daksh-portfolio.cctlds.online",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "1.072071"
+    "Latency": "0.201866"
 }
 ,{
     "Name": "www.google.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.766428"
+    "Latency": "0.567190"
 }
 ,{
     "Name": "www.youtube.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.473595"
+    "Latency": "0.417764"
+}
+,{
+    "Name": "example23456.com",
+    "Status": "DOWN",
+    "HTTP_Status": "404",
+    "Latency": "0.001295"
 }
 ,{
     "Name": "github.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.399904"
-}
-,{
-    "Name": "example23456.com",
-    "Status": "DOWN",
-    "HTTP_Status": "",
-    "Latency": "0.003581"
+    "Latency": "0.426041"
 }
 ,{
     "Name": "daksh-portfolio.cctlds.online",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.432650"
+    "Latency": "0.552363"
 }
 ,{
     "Name": "www.google.com",
-    "Status": "UP",
-    "HTTP_Status": "200",
-    "Latency": "0.801049"
+    "Status": "DOWN",
+    "HTTP_Status": "404",
+    "Latency": "0.602203"
 }
 ,{
     "Name": "www.youtube.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.475783"
+    "Latency": "0.510972"
 }
 ,{
     "Name": "github.com",
     "Status": "UP",
     "HTTP_Status": "200",
-    "Latency": "0.780915"
+    "Latency": "0.453892"
 }
 ,{
     "Name": "example23456.com",
     "Status": "DOWN",
-    "HTTP_Status": "",
-    "Latency": "0.003636"
+    "HTTP_Status": "404",
+    "Latency": "0.003536"
+}
+,{
+    "Name": "daksh-portfolio.cctlds.online",
+    "Status": "UP",
+    "HTTP_Status": "200",
+    "Latency": "0.196485"
+}
+,{
+    "Name": "www.google.com",
+    "Status": "UP",
+    "HTTP_Status": "200",
+    "Latency": "1.530799"
+}
+,{
+    "Name": "www.youtube.com",
+    "Status": "UP",
+    "HTTP_Status": "200",
+    "Latency": "0.782949"
+}
+,{
+    "Name": "github.com",
+    "Status": "UP",
+    "HTTP_Status": "200",
+    "Latency": "0.344759"
+}
+,{
+    "Name": "example23456.com",
+    "Status": "DOWN",
+    "HTTP_Status": "404",
+    "Latency": "0.003612"
 }
       ]
 }

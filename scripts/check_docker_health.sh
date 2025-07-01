@@ -2,7 +2,8 @@
 
 set -e  # if anything return other than 0 -- exit the script
 
-echo "Checking All Containers Health......"
+echo -e "\nChecking All Containers Health......"
+echo -e "===================================="
 
 logs_dir="$(dirname "$0")/../logs"  # we dont want inside scripts we want in root
 log_file="$logs_dir/container-health.log"
@@ -33,3 +34,5 @@ fetch_container_status
 # Log output without color codes
 log_output=$(fetch_container_status | sed 's/\x1b\[[0-9]*m//g') # x1b is ESC(e)
 echo -e "[$(date +"%d-%m-%Y_%H:%M:%S")] Checking Containers Status...\n$log_output\n****************" >> $log_file
+echo "====================================\n" 
+echo -e "\n\e[35mContainer health check completed. Logs saved to: $log_file\e[0m\n"

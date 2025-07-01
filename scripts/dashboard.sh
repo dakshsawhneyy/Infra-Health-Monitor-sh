@@ -17,7 +17,7 @@ latency="$4"
 service_entry="{
     \"Name\": \"$name\",
     \"Status\": \"$status\",
-    \"HTTP_Status\": \"$http_status\",
+    \"HTTP_Status\": \"${http_status:-404}\",
     \"Latency\": \"$latency\"
 }"
 
@@ -51,4 +51,4 @@ fi
 
 # Changing Or Appending new date using sed into json file
 sed -i "s/\"last_checked\":\".*\"/\"last_checked\":\"$(date +"%d-%m-%Y_%H:%M:%S")\"/" "$json_file"
-echo "Date Changed"
+# echo "Date Changed"

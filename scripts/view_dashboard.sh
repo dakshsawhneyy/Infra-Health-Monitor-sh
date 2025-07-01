@@ -9,7 +9,7 @@ fi
 
 last_checked=$(jq -r '.last_checked' "$json_file")
 echo -e "\nLast Checked: $last_checked\n"
-echo "--- Services Dashboard --\n"
+echo -e "\e[36m--- Services Dashboard ---\e[0m\n"
 
 # Storing JSON Objects Items as variables
 jq -c '.services[]' "$json_file" | while read -r line; do
@@ -18,5 +18,17 @@ jq -c '.services[]' "$json_file" | while read -r line; do
     http_status=$(echo "$line" | jq -r '.HTTP_Status')
     latency=$(echo "$line" | jq -r '.Latency')
 
-echo -e "Name: $name\nStatus: $status\nHTTP Status: $http_status\nLatency: $latency seconds\n---------------------\n"
+case "$status" in
+    "UP")
+        color="\e[32m"  # Green for UP
+        ;;
+    "DOWN")
+        color="\e[31m"  # Red for DOWN
+        ;;
+    *)
+        color="\e[33m"  # Yellow for unknown status
+        ;;
+esac
+
+echo -e "\e[35mName: $name\e[0m\n${color}Status: $status\e[0m\nHTTP Status: $http_status\nLatency: $latency seconds\n---------------------\n"
 done

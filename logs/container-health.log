@@ -9,4 +9,43 @@ my-nginx is healthy
 [29-06-2025_18:24:47] Checking Containers Status...
 my-sql is healthy
 my-nginx is healthy
+****************[01-07-2025_09:39:14] Checking Containers Status...
+my-sql is starting
+my-nginx is healthy
+****************
+[01-07-2025_09:39:46] Checking Containers Status...
+my-sql is starting
+my-nginx is healthy
+****************
+[01-07-2025_09:39:56] Checking Containers Status...
+my-sql is healthy
+my-nginx is healthy
+****************
+[01-07-2025_09:40:00] Checking Containers Status...
+my-sql is healthy
+my-nginx is healthy
+****************
+[01-07-2025_09:40:22] Checking Containers Status...
+my-sql is healthy
+my-nginx is healthy
+****************
+[01-07-2025_09:40:48] Checking Containers Status...
+my-sql is healthy
+my-nginx is healthy
+****************
+[01-07-2025_09:40:53] Checking Containers Status...
+my-sql is healthy
+my-nginx is healthy
+****************
+[01-07-2025_09:40:57] Checking Containers Status...
+my-sql is healthy
+my-nginx is healthy
+****************
+[01-07-2025_09:41:00] Checking Containers Status...
+my-sql is healthy
+my-nginx is healthy
+****************
+[01-07-2025_09:41:15] Checking Containers Status...
+my-sql is healthy
+my-nginx is healthy
 ****************
