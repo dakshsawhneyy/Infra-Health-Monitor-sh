@@ -1,6 +1,7 @@
 # Docker Containers & Website Health Monitoring Suite
 
 ## Project Overview
+<img width="903" height="423" alt="image (36)" src="https://github.com/user-attachments/assets/ae446069-a70c-4940-8925-1f8b9641b772" />
 
 This project is a complete monitoring suite designed to help you track the health of your Docker containers and the uptime of external websites. It integrates alerting, log rotation, and JSON dashboard generation - all using pure shell scripting.
 
@@ -9,15 +10,22 @@ This project is a complete monitoring suite designed to help you track the healt
 - **Docker Container Health Check**
   - Inspects running Docker containers.
   - Logs container names, health status, and timestamps.
+<img width="1007" height="555" alt="image (37)" src="https://github.com/user-attachments/assets/10234ad9-06b1-41a5-bf5a-f4bf72ba535a" />
+
 
 - **Website Uptime Monitoring**
   - Checks website availability via HTTP status codes.
   - Color-coded terminal output for quick status identification.
   - Logs each check with timestamps.
+<img width="697" height="931" alt="image (34)" src="https://github.com/user-attachments/assets/31b29b95-fe15-47be-8d53-152879de4e96" />
+
 
 - **Alert System**
   - Sends alerts when websites go down.
   - Uses local flag files to avoid spamming alerts.
+  <img width="1747" height="958" alt="image (38)" src="https://github.com/user-attachments/assets/c8c8383e-174f-4f08-9936-7fc2fb1bd1f4" />
+
+
 
 - **Log Rotation**
   - Automatically rotates log files when they exceed a size threshold.
